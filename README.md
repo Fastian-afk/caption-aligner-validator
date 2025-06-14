@@ -1,2 +1,24 @@
-# caption-aligner-validator
-As part of my internship at the Knowledge Discovery and Data Science Lab (KDD Lab) @ FAST-NU, I built a system that automatically translates image captions into any target language — and validates the semantic consistency of the translation.
+# 📝 Multilingual Caption Aligner & Semantic Validator
+
+This project translates image captions into a target language (e.g., Urdu, Spanish, Chinese) and validates that the translated captions retain their original meaning using sentence embeddings.
+
+## 🔧 Features
+- Translates image-caption pairs using Hugging Face translation pipelines
+- Computes cosine similarity using LaBSE multilingual embeddings
+- Filters out semantically inconsistent translations
+- Exports aligned data to CSV
+
+## 📂 Output Format
+```csv
+image_path,en_caption,lang_caption,similarity
+💡 Technologies Used
+Hugging Face Transformers
+
+SentenceTransformers (LaBSE)
+
+Python
+
+📊 Example
+Caption: "A dog running through the field"
+Translation: "ایک کتا میدان سے چلّاتا ہے"
+Similarity: 0.864
